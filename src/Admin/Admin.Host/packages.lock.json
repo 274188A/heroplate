@@ -866,6 +866,7 @@
           "Humanizer.Core": "[2.14.1, )",
           "Mapster": "[7.3.0, )",
           "Microsoft.AspNetCore.Components.WebAssembly": "[7.0.3, )",
+          "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "[7.0.3, )",
           "Microsoft.AspNetCore.Localization": "[2.2.0, )",
           "Microsoft.AspNetCore.SignalR.Client": "[7.0.3, )",
           "Microsoft.AspNetCore.WebUtilities": "[2.2.0, )",

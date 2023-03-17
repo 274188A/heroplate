@@ -1,6 +1,6 @@
 {
   "SecuritySettings": {
-    "Provider": "Jwt",
+    "Provider": "Auth0",
     "RequireConfirmedAccount": true,
     "JwtSettings": {
       "key": "S0M3RAN0MS3CR3T!1!MAG1C!1!",
@@ -20,6 +20,10 @@
       "TokenUrl": "https://login.microsoftonline.com/organizations/oauth2/v2.0/token",
       "ApiScope": "api://<Your ClientId of the AzureAd Server App Registration>/access_as_user",
       "OpenIdClientId": "<Your ClientId of the AzureAd Client App Registration>"
+    },
+    "Auth0": {
+      "Domain": "dev-uvndp4mk.au.auth0.com",
+      "Audience": "https://jbapi.com"
     }
   }
 }

@@ -42,6 +42,16 @@
           "Microsoft.JSInterop.WebAssembly": "7.0.3"
         }
       },
+      "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
+        "type": "Direct",
+        "requested": "[7.0.3, )",
+        "resolved": "7.0.3",
+        "contentHash": "Br4jF4RnMu/PdtjqQ/vA8whlEtmd2YE7KtpOuufjZyLAJHg9B/Pq2DxcVmZ0VeQRiWerhRl3cda54TsyQ97ttA==",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Authorization": "7.0.3",
+          "Microsoft.AspNetCore.Components.Web": "7.0.3"
+        }
+      },
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
         "type": "Direct",
         "requested": "[7.0.3, )",
@@ -227,15 +237,6 @@
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.JSInterop": "7.0.3",
           "System.IO.Pipelines": "7.0.0"
-        }
-      },
-      "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
-        "type": "Transitive",
-        "resolved": "7.0.3",
-        "contentHash": "Br4jF4RnMu/PdtjqQ/vA8whlEtmd2YE7KtpOuufjZyLAJHg9B/Pq2DxcVmZ0VeQRiWerhRl3cda54TsyQ97ttA==",
-        "dependencies": {
-          "Microsoft.AspNetCore.Components.Authorization": "7.0.3",
-          "Microsoft.AspNetCore.Components.Web": "7.0.3"
         }
       },
       "Microsoft.AspNetCore.Connections.Abstractions": {

@@ -51,8 +51,10 @@ public class LocalCacheService : ICacheService
         return Task.CompletedTask;
     }
 
+#pragma warning disable CS8601 // Possible null reference assignment.
     public bool Contains(string key) =>
         _cache.TryGetValue(key, out object _);
+#pragma warning restore CS8601 // Possible null reference assignment.
 
     public Task<bool> ContainsAsync(string key, CancellationToken ct = default) =>
         Task.FromResult(Contains(key));

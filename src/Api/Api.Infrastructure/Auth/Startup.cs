@@ -1,4 +1,5 @@
 using Heroplate.Api.Application.Common.Interfaces;
+using Heroplate.Api.Infrastructure.Auth.Auth0;
 using Heroplate.Api.Infrastructure.Auth.AzureAd;
 using Heroplate.Api.Infrastructure.Auth.FakeJwt;
 using Heroplate.Api.Infrastructure.Auth.Jwt;
@@ -25,6 +26,10 @@ internal static class Startup
             ? services.AddAzureAdAuth(config)
             : config["SecuritySettings:Provider"]?.Equals("FakeJwt", StringComparison.OrdinalIgnoreCase) is true
             ? services.AddFakeJwtAuth()
+
+             : config["SecuritySettings:Provider"]?.Equals("Auth0", StringComparison.OrdinalIgnoreCase) is true
+            ? services.AddAuth0(config)
+
             : services.AddJwtAuth();
     }
 
