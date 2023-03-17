@@ -1,0 +1,38 @@
+﻿@page "/authentication/{action}"
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.Extensions.Configuration
+
+@inject NavigationManager Navigation
+@inject IConfiguration Configuration
+
+<RemoteAuthenticatorView Action="@Action">
+    <LogOut>
+        @{
+            var authority = "";
+            if (Configuration != null && Configuration["Auth0:Authority"] != null)
+            {
+                authority = Configuration!["Auth0:Authority"] as string;
+            }
+            var clientId = "";
+            if (Configuration != null && Configuration["Auth0:Authority"] != null)
+            {
+                clientId = Configuration!["Auth0:ClientId"] as string;
+            }
+
+            if (!string.IsNullOrEmpty(clientId) && !string.IsNullOrEmpty(authority))
+            {
+                Navigation.NavigateTo($"{authority}/v2/logout?client_id={clientId}");
+            }            
+        }
+    </LogOut>
+</RemoteAuthenticatorView>
+
+@code {
+    [Parameter] public string Action { get; set; } = "";
+
+    protected override Task OnInitializedAsync()
+    {
+        return base.OnInitializedAsync();
+    }
+
+}
